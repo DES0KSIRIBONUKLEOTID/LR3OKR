@@ -12,22 +12,22 @@ namespace LW3_OKR
         public Form1()
         {
             InitializeComponent();
-            MongoServerAddress serverAddress = new MongoServerAddress("localhost", 27017);
-            LoadData();
+            //mongoService = new MongoService();
+            //LoadData();
         }
-        void LoadData()
-        {
-            var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("LW3_OKR");
-            var collection = database.GetCollection<Orders>("Orders");
-            var orders = collection.Find(new BsonDocument()).ToList();
-        }
+        //void LoadData()
+        //{
+        //    var client = new MongoClient("mongodb+srv://<ivandmytruk42_db_user>:<xd7NiRFVNU2atx5e>@formia.awxcqul.mongodb.net/?appName=ForMiA");
+        //    var database = client.GetDatabase("LW3_OKR");
+        //    var collection = database.GetCollection<Orders>("Orders");
+        //    var orders = collection.Find(new BsonDocument()).ToList();
+        //}
 
         private void VivePersonal_Click(object sender, EventArgs e)
         {
             FVivePersonal fVivePersonal = new FVivePersonal();
             fVivePersonal.ShowDialog();
-            LoadData();
+            //LoadData();
         }
     }
 }

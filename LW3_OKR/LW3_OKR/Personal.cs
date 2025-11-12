@@ -41,7 +41,7 @@ namespace LW3_OKR
         private IMongoCollection<Personal> personalCollection;
         public MongoDBPersonal()
         {
-            var client = new MongoClient("https://cloud.mongodb.com/v2/6901b69b04bf5e2e01100b3d#/addData/LW3-OKR/create");
+            var client = new MongoClient("mongodb+srv://<ivandmytruk42_db_user>:<xd7NiRFVNU2atx5e>@formia.awxcqul.mongodb.net/?appName=ForMiA");
             var database = client.GetDatabase("LW3_OKR_DB");
             personalCollection = database.GetCollection<Personal>("Personal");
         }
