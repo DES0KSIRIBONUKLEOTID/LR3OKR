@@ -35,7 +35,7 @@
             button4 = new Button();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            button5 = new Button();
+            VivePersonal = new Button();
             button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -104,14 +104,15 @@
             pictureBox2.TabIndex = 6;
             pictureBox2.TabStop = false;
             // 
-            // button5
+            // VivePersonal
             // 
-            button5.Location = new Point(708, 18);
-            button5.Name = "button5";
-            button5.Size = new Size(119, 46);
-            button5.TabIndex = 7;
-            button5.Text = "Персонал";
-            button5.UseVisualStyleBackColor = true;
+            VivePersonal.Location = new Point(708, 18);
+            VivePersonal.Name = "VivePersonal";
+            VivePersonal.Size = new Size(119, 46);
+            VivePersonal.TabIndex = 7;
+            VivePersonal.Text = "Персонал";
+            VivePersonal.UseVisualStyleBackColor = true;
+            VivePersonal.Click += VivePersonal_Click;
             // 
             // button6
             // 
@@ -128,7 +129,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(976, 514);
             Controls.Add(button6);
-            Controls.Add(button5);
+            Controls.Add(VivePersonal);
             Controls.Add(pictureBox2);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -153,7 +154,7 @@
         private Button button4;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private Button button5;
+        private Button VivePersonal;
         private Button button6;
     }
 }
