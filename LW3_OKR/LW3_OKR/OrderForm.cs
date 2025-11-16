@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LW3_OKR
 {
-    public partial class FVivePersonal : Form
+    public partial class OrderForm : Form
     {
-        public FVivePersonal()
+        public OrderForm()
         {
             InitializeComponent();
         }

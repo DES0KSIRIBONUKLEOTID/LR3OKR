@@ -36,7 +36,8 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             VivePersonal = new Button();
-            button6 = new Button();
+            flowGoods = new FlowLayoutPanel();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -45,7 +46,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            label1.Location = new Point(179, 14);
+            label1.Location = new Point(160, 18);
             label1.Name = "label1";
             label1.Size = new Size(157, 41);
             label1.TabIndex = 0;
@@ -54,59 +55,76 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 9F);
-            button1.Location = new Point(3, 65);
+            button1.Location = new Point(3, 79);
             button1.Name = "button1";
             button1.Size = new Size(73, 59);
             button1.TabIndex = 1;
             button1.Text = "Суші";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            button1.MouseEnter += button1_MouseEnter;
+            button1.MouseLeave += button1_MouseLeave;
             // 
             // button2
             // 
-            button2.Location = new Point(3, 130);
+            button2.Location = new Point(3, 209);
             button2.Name = "button2";
             button2.Size = new Size(73, 59);
             button2.TabIndex = 2;
             button2.Text = "Сети";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            button2.MouseEnter += button1_MouseEnter;
+            button2.MouseLeave += button1_MouseLeave;
             // 
             // button3
             // 
-            button3.Location = new Point(3, 195);
+            button3.Location = new Point(3, 144);
             button3.Name = "button3";
             button3.Size = new Size(73, 59);
             button3.TabIndex = 3;
             button3.Text = "Роли";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            button3.MouseEnter += button1_MouseEnter;
+            button3.MouseLeave += button1_MouseLeave;
             // 
             // button4
             // 
-            button4.Location = new Point(3, 260);
+            button4.Location = new Point(3, 274);
             button4.Name = "button4";
             button4.Size = new Size(73, 59);
             button4.TabIndex = 4;
             button4.Text = "Напої";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            button4.MouseEnter += button1_MouseEnter;
+            button4.MouseLeave += button1_MouseLeave;
             // 
             // pictureBox1
             // 
+            pictureBox1.Image = Properties.Resources.ChatGPT_Image_12_лист__2025_р___09_39_43;
             pictureBox1.Location = new Point(82, 78);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(884, 434);
+            pictureBox1.Size = new Size(882, 434);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(98, 4);
+            pictureBox2.Image = Properties.Resources.ChatGPT_Image_12_лист__2025_р___09_26_52;
+            pictureBox2.InitialImage = Properties.Resources.ChatGPT_Image_12_лист__2025_р___09_26_52;
+            pictureBox2.Location = new Point(82, 4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(72, 68);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 6;
             pictureBox2.TabStop = false;
             // 
             // VivePersonal
             // 
-            VivePersonal.Location = new Point(708, 18);
+            VivePersonal.Location = new Point(845, 22);
             VivePersonal.Name = "VivePersonal";
             VivePersonal.Size = new Size(119, 46);
             VivePersonal.TabIndex = 7;
@@ -114,21 +132,33 @@
             VivePersonal.UseVisualStyleBackColor = true;
             VivePersonal.Click += VivePersonal_Click;
             // 
-            // button6
+            // flowGoods
             // 
-            button6.Location = new Point(833, 18);
-            button6.Name = "button6";
-            button6.Size = new Size(119, 46);
-            button6.TabIndex = 8;
-            button6.Text = "Call-центр";
-            button6.UseVisualStyleBackColor = true;
+            flowGoods.BackgroundImage = Properties.Resources.ChatGPT_Image_12_лист__2025_р___09_39_43;
+            flowGoods.BackgroundImageLayout = ImageLayout.Stretch;
+            flowGoods.Location = new Point(82, 79);
+            flowGoods.Name = "flowGoods";
+            flowGoods.Size = new Size(882, 433);
+            flowGoods.TabIndex = 9;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(553, 22);
+            button5.Name = "button5";
+            button5.Size = new Size(212, 46);
+            button5.TabIndex = 10;
+            button5.Text = "Переглянути замовлення";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(976, 514);
-            Controls.Add(button6);
+            Controls.Add(button5);
+            Controls.Add(flowGoods);
             Controls.Add(VivePersonal);
             Controls.Add(pictureBox2);
             Controls.Add(button4);
@@ -138,7 +168,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Меню";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
@@ -155,6 +185,7 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Button VivePersonal;
-        private Button button6;
+        private FlowLayoutPanel flowGoods;
+        private Button button5;
     }
 }
