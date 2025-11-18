@@ -44,6 +44,7 @@ namespace LW3_OKR
 
         private void button2_Click(object sender, EventArgs e)
         {
+            SaveOrderToDB();
             this.Close();
         }
         private void SaveOrderToDB()
