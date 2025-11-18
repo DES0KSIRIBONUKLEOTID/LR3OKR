@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Microsoft.VisualBasic; // для InputBox
+using Microsoft.VisualBasic;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
@@ -234,9 +234,6 @@ namespace LW3_OKR
                 return GetItemsSum() + Tips;
             }
         }
-
-        // ====== Обробники кнопок меню ======
-
         private void button1_Click(object sender, EventArgs e)
         {
             LoadGoods("Sushi");
