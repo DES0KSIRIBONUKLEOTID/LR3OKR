@@ -21,6 +21,7 @@ namespace LW3_OKR
         public FVivePersonal()
         {
             InitializeComponent();
+            label1.Text = "";
             db = new MongoDBPersonal();
             persons = db.GetAllPersonals();
             q = persons.Count;
@@ -30,7 +31,12 @@ namespace LW3_OKR
                 MessageBox.Show("Немає персоналу в базі!");
                 return;
             }
-
+            string s= "🟦 ";
+            for(int i=0;i<=q-2;i++)
+            {
+                s += "🔵 ";
+            }
+            label1.Text = s;
             ShowPerson(0);
         }
         public void ShowPerson(int i)
@@ -55,10 +61,23 @@ namespace LW3_OKR
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             position--;
             if (position < 0)
                 position = q - 1;
-
+            string s="";
+            for (int i = 0; i <= q - 1; i++)
+            {
+                if (i == position)
+                {
+                    s+= "🟦 ";
+                }
+                else
+                {
+                    s += "🔵 ";
+                }
+            }
+            label1.Text = s;
             ShowPerson(position);
         }
         private void button2_Click(object sender, EventArgs e)
@@ -66,7 +85,19 @@ namespace LW3_OKR
             position++;
             if (position >= q)
                 position = 0;
-
+            string s = "";
+            for (int i = 0; i <= q - 1; i++)
+            {
+                if (i == position)
+                {
+                    s += "🟦 ";
+                }
+                else
+                {
+                    s += "🔵 ";
+                }
+            }
+            label1.Text = s;
             ShowPerson(position);
         }
     }

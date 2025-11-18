@@ -131,6 +131,8 @@
             VivePersonal.Text = "Персонал";
             VivePersonal.UseVisualStyleBackColor = true;
             VivePersonal.Click += VivePersonal_Click;
+            VivePersonal.MouseEnter += button1_MouseEnter;
+            VivePersonal.MouseLeave += button1_MouseLeave;
             // 
             // flowGoods
             // 
@@ -143,13 +145,15 @@
             // 
             // button5
             // 
-            button5.Location = new Point(553, 22);
+            button5.Location = new Point(576, 22);
             button5.Name = "button5";
-            button5.Size = new Size(212, 46);
+            button5.Size = new Size(263, 46);
             button5.TabIndex = 10;
             button5.Text = "Переглянути замовлення";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
+            button5.MouseEnter += button1_MouseEnter;
+            button5.MouseLeave += button1_MouseLeave;
             // 
             // Form1
             // 

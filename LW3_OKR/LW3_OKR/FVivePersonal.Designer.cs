@@ -36,6 +36,7 @@
             pictureBox1 = new PictureBox();
             button1 = new Button();
             button2 = new Button();
+            label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -118,12 +119,23 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Location = new Point(246, 288);
+            label1.Name = "label1";
+            label1.Size = new Size(50, 20);
+            label1.TabIndex = 3;
+            label1.Text = "label1";
+            // 
             // FVivePersonal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.ChatGPT_Image_12_лист__2025_р___09_39_43;
             ClientSize = new Size(671, 326);
+            Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(panel1);
@@ -133,6 +145,7 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -145,5 +158,6 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private Label label1;
     }
 }

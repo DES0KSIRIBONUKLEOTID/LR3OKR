@@ -26,6 +26,8 @@ namespace LW3_OKR
             button2.Font = new Font("Segoe UI Emoji", 12);
             button3.Font = new Font("Segoe UI Emoji", 12);
             button4.Font = new Font("Segoe UI Emoji", 12);
+            button5.Font = new Font("Segoe UI Emoji", 12);
+            VivePersonal.Font = new Font("Segoe UI Emoji", 12);
         }
 
         private void VivePersonal_Click(object sender, EventArgs e)
@@ -57,6 +59,14 @@ namespace LW3_OKR
             {
                 button.Text = "🥤";
             }
+            if(button5==button)
+            {
+                button.Text = "🛒";
+            }
+            if(button== VivePersonal)
+            {
+                button.Text = "👥";
+            }
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
@@ -81,6 +91,14 @@ namespace LW3_OKR
             if (button4 == button)
             {
                 button.Text = "Напої";
+            }
+            if (button5 == button)
+            {
+                button.Text = "Переглянути замовлення";
+            }
+            if (button == VivePersonal)
+            {
+                button.Text = "Персонал";
             }
         }
 

@@ -105,6 +105,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.ChatGPT_Image_12_лист__2025_р___09_39_43;
             ClientSize = new Size(440, 450);
             Controls.Add(button2);
             Controls.Add(button1);
