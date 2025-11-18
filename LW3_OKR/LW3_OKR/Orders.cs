@@ -29,6 +29,9 @@ namespace LW3_OKR
         [BsonElement("Items")]
         public List<GoodsInOrder> Items { get; set; }
 
+        [BsonElement("FormattedText")]
+        public string FormattedText { get; set; }
+
         public Orders()
         {
             Number = "";

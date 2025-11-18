@@ -53,22 +53,37 @@ namespace LW3_OKR
             var ordersCollection = db.GetCollection<Orders>("Orders");
 
             var newOrder = new Orders();
-            newOrder.Number = Guid.NewGuid().ToString().Substring(0, 8); // Генерація номера
-            newOrder.PersonalId = "Admin"; // тимчасово
+            newOrder.Number = Guid.NewGuid().ToString().Substring(0, 8);
+            newOrder.PersonalId = "Admin";
             newOrder.Sum = order.GetItemsSum();
             newOrder.Tip = order.Tips;
             newOrder.Date = DateTime.Now;
 
-            // Додаємо товари з замовлення:
+            // Збереження товарів у структурованому вигляді
             newOrder.Items = order.Items.Select(i => new GoodsInOrder
             {
                 Name = i.Name,
-                Quantity = i.Quantity ?? 0
+                Quantity = Convert.ToInt32(i.Quantity)
             }).ToList();
 
+            // 🔹 Формування красивого тексту для MongoDB
+            var sb = new System.Text.StringBuilder();
+            foreach (var item in newOrder.Items)
+            {
+                sb.AppendLine($"{item.Name} — {item.Quantity} грн");
+            }
+
+            sb.AppendLine($"\nСума страв: {newOrder.Sum} грн");
+            sb.AppendLine($"Чайові: {newOrder.Tip} грн");
+            sb.AppendLine($"Разом: {newOrder.Sum + newOrder.Tip} грн");
+
+            newOrder.FormattedText = sb.ToString();
+
+            // Зберігаємо в MongoDB
             ordersCollection.InsertOne(newOrder);
             MessageBox.Show("Замовлення збережено у базу!");
         }
+
 
     }
 }
