@@ -431,8 +431,29 @@ namespace LW3_OKR
 
         private void button5_Click(object sender, EventArgs e)
         {
-            OrderForm OrderForm = new OrderForm();
-            OrderForm.ShowDialog();
+            if (currentOrder == null || currentOrder.Items.Count == 0)
+            {
+                MessageBox.Show("Поточне замовлення порожнє!");
+                return;
+            }
+
+            // Перед показом — питаємо чайові
+            string tipsStr = Microsoft.VisualBasic.Interaction.InputBox(
+                "Введіть чайові (грн):", "Чайові", currentOrder.Tips.ToString());
+
+            if (decimal.TryParse(tipsStr, out decimal tips))
+                currentOrder.Tips = tips;
+
+            // Відкриваємо форму замовлення
+            OrderForm form = new OrderForm(currentOrder);
+            form.ShowDialog();
+
+            if (form.OrderCancelled)
+            {
+                currentOrder = null;
+                MessageBox.Show("Замовлення скасовано.");
+            }
         }
+
     }
 }
