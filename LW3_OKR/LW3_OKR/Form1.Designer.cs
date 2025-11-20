@@ -160,7 +160,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(976, 514);
+            ClientSize = new Size(977, 535);
             Controls.Add(button5);
             Controls.Add(flowGoods);
             Controls.Add(VivePersonal);
