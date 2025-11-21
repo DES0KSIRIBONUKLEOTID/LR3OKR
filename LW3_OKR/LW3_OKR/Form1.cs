@@ -59,11 +59,11 @@ namespace LW3_OKR
             {
                 button.Text = "🥤";
             }
-            if(button5==button)
+            if (button5 == button)
             {
                 button.Text = "🛒";
             }
-            if(button== VivePersonal)
+            if (button == VivePersonal)
             {
                 button.Text = "👥";
             }
@@ -440,7 +440,6 @@ namespace LW3_OKR
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
         // ПРИКЛАД обробника для кнопки "Поточне замовлення"
         private void buttonCurrentOrder_Click(object sender, EventArgs e)
         {
@@ -449,6 +448,7 @@ namespace LW3_OKR
 
         private void button5_Click(object sender, EventArgs e)
         {
+
             if (currentOrder == null || currentOrder.Items.Count == 0)
             {
                 MessageBox.Show("Поточне замовлення порожнє!");
@@ -473,5 +473,10 @@ namespace LW3_OKR
             }
         }
 
+        private void buttonViveHist_Click(object sender, EventArgs e)
+        {
+            ViewHistoryOrders form = new ViewHistoryOrders();
+            form.ShowDialog();
+        }
     }
 }

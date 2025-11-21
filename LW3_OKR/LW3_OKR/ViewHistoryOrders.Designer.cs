@@ -34,6 +34,7 @@
             label2 = new Label();
             label3 = new Label();
             listView1 = new ListView();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -97,6 +98,16 @@
             listView1.TabIndex = 6;
             listView1.UseCompatibleStateImageBehavior = false;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Cyan;
+            button1.Location = new Point(490, 321);
+            button1.Name = "button1";
+            button1.Size = new Size(156, 51);
+            button1.TabIndex = 7;
+            button1.Text = "Знайти замовлення за датою";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // ViewHistoryOrders
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -104,6 +115,7 @@
             BackColor = SystemColors.Control;
             BackgroundImage = Properties.Resources.FonHistory;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(listView1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -124,5 +136,6 @@
         private Label label2;
         private Label label3;
         private ListView listView1;
+        private Button button1;
     }
 }
