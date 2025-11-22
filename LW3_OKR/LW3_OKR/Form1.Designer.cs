@@ -38,6 +38,7 @@
             VivePersonal = new Button();
             flowGoods = new FlowLayoutPanel();
             button5 = new Button();
+            buttonViveHist = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -155,12 +156,23 @@
             button5.MouseEnter += button1_MouseEnter;
             button5.MouseLeave += button1_MouseLeave;
             // 
+            // buttonViveHist
+            // 
+            buttonViveHist.Location = new Point(397, 22);
+            buttonViveHist.Name = "buttonViveHist";
+            buttonViveHist.Size = new Size(150, 46);
+            buttonViveHist.TabIndex = 11;
+            buttonViveHist.Text = "Історія замовлень";
+            buttonViveHist.UseVisualStyleBackColor = true;
+            buttonViveHist.Click += buttonViveHist_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(976, 514);
+            ClientSize = new Size(977, 535);
+            Controls.Add(buttonViveHist);
             Controls.Add(button5);
             Controls.Add(flowGoods);
             Controls.Add(VivePersonal);
@@ -191,5 +203,6 @@
         private Button VivePersonal;
         private FlowLayoutPanel flowGoods;
         private Button button5;
+        private Button buttonViveHist;
     }
 }
