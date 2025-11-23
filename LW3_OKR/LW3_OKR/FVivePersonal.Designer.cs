@@ -108,6 +108,8 @@
             button1.Text = "Попередній";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            button1.MouseEnter += button2_MouseEnter;
+            button1.MouseLeave += button2_MouseLeave;
             // 
             // button2
             // 
@@ -118,6 +120,8 @@
             button2.Text = "Наступний";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
+            button2.MouseEnter += button2_MouseEnter;
+            button2.MouseLeave += button2_MouseLeave;
             // 
             // label1
             // 

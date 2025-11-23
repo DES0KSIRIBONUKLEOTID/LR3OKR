@@ -55,13 +55,14 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.White;
             button1.Font = new Font("Segoe UI", 9F);
             button1.Location = new Point(3, 79);
             button1.Name = "button1";
             button1.Size = new Size(73, 59);
             button1.TabIndex = 1;
             button1.Text = "Суші";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             button1.MouseEnter += button1_MouseEnter;
             button1.MouseLeave += button1_MouseLeave;
@@ -165,6 +166,8 @@
             buttonViveHist.Text = "Історія замовлень";
             buttonViveHist.UseVisualStyleBackColor = true;
             buttonViveHist.Click += buttonViveHist_Click;
+            buttonViveHist.MouseEnter += button1_MouseEnter;
+            buttonViveHist.MouseLeave += button1_MouseLeave;
             // 
             // Form1
             // 

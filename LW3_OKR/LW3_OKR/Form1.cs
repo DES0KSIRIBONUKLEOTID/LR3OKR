@@ -46,26 +46,47 @@ namespace LW3_OKR
             if (button1 == button)
             {
                 button.Text = "🍣";
+                button.BackColor = Color.Lime;
             }
             if (button2 == button)
             {
                 button.Text = "🍱";
+                button.BackColor = Color.Lime;
             }
             if (button3 == button)
             {
                 button.Text = "🍙";
+                button.BackColor = Color.Lime;
             }
             if (button4 == button)
             {
                 button.Text = "🥤";
+                button.BackColor = Color.Lime;
             }
             if (button5 == button)
             {
                 button.Text = "🛒";
+                button.BackColor = Color.Lime;
             }
             if (button == VivePersonal)
             {
                 button.Text = "👥";
+                button.BackColor = Color.Lime;
+            }
+            if (button == buttonViveHist)
+            {
+                button.Text = "📜";
+                button.BackColor = Color.Lime;
+            }
+            if(button == button5)
+            {
+                button.Text = "🧾";
+                button.BackColor = Color.Lime;
+            }
+            if(button == VivePersonal)
+            {
+               button.Text = "👨‍🍳";
+                button.BackColor = Color.Lime;
             }
         }
 
@@ -99,6 +120,10 @@ namespace LW3_OKR
             if (button == VivePersonal)
             {
                 button.Text = "Персонал";
+            }
+            if (button == buttonViveHist)
+            {
+                button.Text = "Історія замовлень";
             }
         }
 
