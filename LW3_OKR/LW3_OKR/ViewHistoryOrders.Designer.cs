@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            textBoxSum = new TextBox();
+            textBoxDate = new TextBox();
             label2 = new Label();
             label3 = new Label();
             listView1 = new ListView();
-            button1 = new Button();
+            buttonFind = new Button();
             SuspendLayout();
             // 
             // label1
@@ -45,11 +45,11 @@
             label1.ForeColor = SystemColors.ActiveCaptionText;
             label1.Location = new Point(365, 153);
             label1.Name = "label1";
-            label1.Size = new Size(226, 21);
+            label1.Size = new Size(273, 25);
             label1.TabIndex = 0;
             label1.Text = "Загальна сума замовлень";
             // 
-            // textBox1
+            // textBoxSum
             // 
             textBox1.BackColor = Color.White;
             textBox1.ForeColor = Color.Red;
@@ -58,7 +58,7 @@
             textBox1.Size = new Size(122, 27);
             textBox1.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxDate
             // 
             textBox2.BackColor = Color.White;
             textBox2.ForeColor = Color.Red;
@@ -75,7 +75,7 @@
             label2.ForeColor = SystemColors.ActiveCaptionText;
             label2.Location = new Point(365, 63);
             label2.Name = "label2";
-            label2.Size = new Size(275, 23);
+            label2.Size = new Size(428, 29);
             label2.TabIndex = 3;
             label2.Text = "Введіть дату вашого замовлення";
             // 
@@ -87,32 +87,34 @@
             label3.ForeColor = SystemColors.ActiveCaptionText;
             label3.Location = new Point(6, 22);
             label3.Name = "label3";
-            label3.Size = new Size(209, 28);
+            label3.Size = new Size(270, 32);
             label3.TabIndex = 5;
             label3.Text = "Історія замовлень";
             // 
             // listView1
             // 
-            listView1.Location = new Point(6, 63);
+            listView1.Location = new Point(8, 79);
+            listView1.Margin = new Padding(4, 4, 4, 4);
             listView1.Name = "listView1";
             listView1.Size = new Size(340, 330);
             listView1.TabIndex = 6;
             listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // button1
+            // buttonFind
             // 
-            button1.BackColor = Color.White;
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(352, 329);
-            button1.Name = "button1";
-            button1.Size = new Size(156, 51);
-            button1.TabIndex = 7;
-            button1.Text = "Знайти замовлення за датою";
-            button1.UseVisualStyleBackColor = false;
+            buttonFind.BackColor = Color.Cyan;
+            buttonFind.Location = new Point(612, 401);
+            buttonFind.Margin = new Padding(4, 4, 4, 4);
+            buttonFind.Name = "buttonFind";
+            buttonFind.Size = new Size(195, 64);
+            buttonFind.TabIndex = 7;
+            buttonFind.Text = "Знайти замовлення за датою";
+            buttonFind.UseVisualStyleBackColor = false;
+            buttonFind.Click += buttonFind_Click;
             // 
             // ViewHistoryOrders
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Cornsilk;
             ClientSize = new Size(653, 450);
@@ -120,9 +122,10 @@
             Controls.Add(listView1);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxDate);
+            Controls.Add(textBoxSum);
             Controls.Add(label1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "ViewHistoryOrders";
             Text = "ViewHistoryOrders";
             ResumeLayout(false);
@@ -132,11 +135,11 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textBoxSum;
+        private TextBox textBoxDate;
         private Label label2;
         private Label label3;
         private ListView listView1;
-        private Button button1;
+        private Button buttonFind;
     }
 }
