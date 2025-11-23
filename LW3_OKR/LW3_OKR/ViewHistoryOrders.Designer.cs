@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            textBoxSum = new TextBox();
+            textBoxDate = new TextBox();
             label2 = new Label();
             label3 = new Label();
             listView1 = new ListView();
-            button1 = new Button();
+            buttonFind = new Button();
             SuspendLayout();
             // 
             // label1
@@ -43,29 +43,32 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(365, 153);
+            label1.Location = new Point(292, 122);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(226, 21);
             label1.TabIndex = 0;
             label1.Text = "Загальна сума замовлень";
             // 
-            // textBox1
+            // textBoxSum
             // 
-            textBox1.BackColor = Color.White;
-            textBox1.ForeColor = Color.Red;
-            textBox1.Location = new Point(366, 186);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(122, 27);
-            textBox1.TabIndex = 1;
+            textBoxSum.BackColor = Color.White;
+            textBoxSum.ForeColor = Color.Red;
+            textBoxSum.Location = new Point(293, 149);
+            textBoxSum.Margin = new Padding(2);
+            textBoxSum.Name = "textBoxSum";
+            textBoxSum.Size = new Size(98, 27);
+            textBoxSum.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxDate
             // 
-            textBox2.BackColor = Color.White;
-            textBox2.ForeColor = Color.Red;
-            textBox2.Location = new Point(365, 89);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(153, 27);
-            textBox2.TabIndex = 2;
+            textBoxDate.BackColor = Color.White;
+            textBoxDate.ForeColor = Color.Red;
+            textBoxDate.Location = new Point(292, 75);
+            textBoxDate.Margin = new Padding(2);
+            textBoxDate.Name = "textBoxDate";
+            textBoxDate.Size = new Size(123, 27);
+            textBoxDate.TabIndex = 2;
             // 
             // label2
             // 
@@ -73,7 +76,8 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Bauhaus 93", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(365, 63);
+            label2.Location = new Point(292, 50);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(275, 23);
             label2.TabIndex = 3;
@@ -85,7 +89,8 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Vladimir Script", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(6, 22);
+            label3.Location = new Point(5, 18);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(209, 28);
             label3.TabIndex = 5;
@@ -95,33 +100,35 @@
             // 
             listView1.Location = new Point(6, 63);
             listView1.Name = "listView1";
-            listView1.Size = new Size(340, 330);
+            listView1.Size = new Size(273, 265);
             listView1.TabIndex = 6;
             listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // button1
+            // buttonFind
             // 
-            button1.BackColor = Color.White;
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(352, 329);
-            button1.Name = "button1";
-            button1.Size = new Size(156, 51);
-            button1.TabIndex = 7;
-            button1.Text = "Знайти замовлення за датою";
-            button1.UseVisualStyleBackColor = false;
+            buttonFind.BackColor = Color.White;
+            buttonFind.Location = new Point(293, 289);
+            buttonFind.Name = "buttonFind";
+            buttonFind.Size = new Size(156, 39);
+            buttonFind.TabIndex = 7;
+            buttonFind.Text = "Знайти за датою";
+            buttonFind.UseVisualStyleBackColor = false;
+            buttonFind.Click += buttonFind_Click;
+            buttonFind.MouseEnter += buttonFind_MouseEnter;
+            buttonFind.MouseLeave += buttonFind_MouseLeave;
             // 
             // ViewHistoryOrders
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Cornsilk;
-            ClientSize = new Size(653, 450);
-            Controls.Add(button1);
+            ClientSize = new Size(522, 360);
+            Controls.Add(buttonFind);
             Controls.Add(listView1);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxDate);
+            Controls.Add(textBoxSum);
             Controls.Add(label1);
             Name = "ViewHistoryOrders";
             Text = "ViewHistoryOrders";
@@ -132,11 +139,11 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textBoxSum;
+        private TextBox textBoxDate;
         private Label label2;
         private Label label3;
         private ListView listView1;
-        private Button button1;
+        private Button buttonFind;
     }
 }

@@ -34,7 +34,9 @@
             lblTips = new Label();
             lblTotal = new Label();
             button1 = new Button();
-            button2 = new Button();
+            btnConfirmOrder = new Button();
+            label2 = new Label();
+            txtTips = new TextBox();
             SuspendLayout();
             // 
             // listBoxItems
@@ -42,7 +44,7 @@
             listBoxItems.FormattingEnabled = true;
             listBoxItems.Location = new Point(12, 53);
             listBoxItems.Name = "listBoxItems";
-            listBoxItems.Size = new Size(416, 224);
+            listBoxItems.Size = new Size(416, 184);
             listBoxItems.TabIndex = 0;
             // 
             // label1
@@ -57,7 +59,7 @@
             // lblItemsSum
             // 
             lblItemsSum.AutoSize = true;
-            lblItemsSum.Location = new Point(19, 282);
+            lblItemsSum.Location = new Point(12, 239);
             lblItemsSum.Name = "lblItemsSum";
             lblItemsSum.Size = new Size(50, 20);
             lblItemsSum.TabIndex = 2;
@@ -66,7 +68,7 @@
             // lblTips
             // 
             lblTips.AutoSize = true;
-            lblTips.Location = new Point(19, 311);
+            lblTips.Location = new Point(12, 269);
             lblTips.Name = "lblTips";
             lblTips.Size = new Size(50, 20);
             lblTips.TabIndex = 3;
@@ -75,7 +77,7 @@
             // lblTotal
             // 
             lblTotal.AutoSize = true;
-            lblTotal.Location = new Point(19, 341);
+            lblTotal.Location = new Point(12, 298);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(50, 20);
             lblTotal.TabIndex = 4;
@@ -90,16 +92,37 @@
             button1.Text = "Скасувати замовлення";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            button1.MouseEnter += btnConfirmOrder_MouseEnter;
+            button1.MouseLeave += btnConfirmOrder_MouseLeave;
             // 
-            // button2
+            // btnConfirmOrder
             // 
-            button2.Location = new Point(241, 400);
-            button2.Name = "button2";
-            button2.Size = new Size(187, 38);
-            button2.TabIndex = 6;
-            button2.Text = "Закрити";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnConfirmOrder.Location = new Point(241, 400);
+            btnConfirmOrder.Name = "btnConfirmOrder";
+            btnConfirmOrder.Size = new Size(187, 38);
+            btnConfirmOrder.TabIndex = 6;
+            btnConfirmOrder.Text = "Підтвердити замовлення";
+            btnConfirmOrder.UseVisualStyleBackColor = true;
+            btnConfirmOrder.Click += button2_Click;
+            btnConfirmOrder.MouseEnter += btnConfirmOrder_MouseEnter;
+            btnConfirmOrder.MouseLeave += btnConfirmOrder_MouseLeave;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(302, 239);
+            label2.Name = "label2";
+            label2.Size = new Size(113, 20);
+            label2.TabIndex = 7;
+            label2.Text = "Введіть чайові:";
+            // 
+            // txtTips
+            // 
+            txtTips.Location = new Point(302, 269);
+            txtTips.Margin = new Padding(2);
+            txtTips.Name = "txtTips";
+            txtTips.Size = new Size(116, 27);
+            txtTips.TabIndex = 8;
             // 
             // OrderForm
             // 
@@ -107,7 +130,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.ChatGPT_Image_12_лист__2025_р___09_39_43;
             ClientSize = new Size(440, 450);
-            Controls.Add(button2);
+            Controls.Add(txtTips);
+            Controls.Add(label2);
+            Controls.Add(btnConfirmOrder);
             Controls.Add(button1);
             Controls.Add(lblTotal);
             Controls.Add(lblTips);
@@ -128,6 +153,8 @@
         private Label lblTips;
         private Label lblTotal;
         private Button button1;
-        private Button button2;
+        private Button btnConfirmOrder;
+        private Label label2;
+        private TextBox txtTips;
     }
 }

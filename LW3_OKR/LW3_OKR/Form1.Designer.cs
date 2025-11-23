@@ -39,7 +39,6 @@
             flowGoods = new FlowLayoutPanel();
             button5 = new Button();
             buttonViveHist = new Button();
-            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -56,13 +55,14 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.White;
             button1.Font = new Font("Segoe UI", 9F);
             button1.Location = new Point(3, 79);
             button1.Name = "button1";
             button1.Size = new Size(73, 59);
             button1.TabIndex = 1;
             button1.Text = "Суші";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             button1.MouseEnter += button1_MouseEnter;
             button1.MouseLeave += button1_MouseLeave;
@@ -147,9 +147,9 @@
             // 
             // button5
             // 
-            button5.Location = new Point(636, 22);
+            button5.Location = new Point(576, 22);
             button5.Name = "button5";
-            button5.Size = new Size(203, 46);
+            button5.Size = new Size(263, 46);
             button5.TabIndex = 10;
             button5.Text = "Переглянути замовлення";
             button5.UseVisualStyleBackColor = true;
@@ -159,23 +159,15 @@
             // 
             // buttonViveHist
             // 
-            buttonViveHist.Location = new Point(334, 22);
+            buttonViveHist.Location = new Point(397, 22);
             buttonViveHist.Name = "buttonViveHist";
             buttonViveHist.Size = new Size(150, 46);
             buttonViveHist.TabIndex = 11;
             buttonViveHist.Text = "Історія замовлень";
             buttonViveHist.UseVisualStyleBackColor = true;
             buttonViveHist.Click += buttonViveHist_Click;
-            // 
-            // button6
-            // 
-            button6.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button6.Location = new Point(491, 22);
-            button6.Name = "button6";
-            button6.Size = new Size(139, 46);
-            button6.TabIndex = 12;
-            button6.Text = "Відкрити склад пунктів меню";
-            button6.UseVisualStyleBackColor = true;
+            buttonViveHist.MouseEnter += button1_MouseEnter;
+            buttonViveHist.MouseLeave += button1_MouseLeave;
             // 
             // Form1
             // 
@@ -183,7 +175,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(977, 535);
-            Controls.Add(button6);
             Controls.Add(buttonViveHist);
             Controls.Add(button5);
             Controls.Add(flowGoods);
@@ -216,6 +207,5 @@
         private FlowLayoutPanel flowGoods;
         private Button button5;
         private Button buttonViveHist;
-        private Button button6;
     }
 }
