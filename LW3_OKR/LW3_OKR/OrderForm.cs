@@ -154,40 +154,5 @@ namespace LW3_OKR
             public string Name { get; set; }
             public int Quantity { get; set; }
         }
-
-        private void btnConfirmOrder_MouseEnter(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-
-            if (button != null)
-            {
-                button.BackColor = Color.LightBlue;
-            }
-            if (button == button1)
-            {
-                button.Text = "✖";
-            }
-            if (button == btnConfirmOrder)
-            {
-                button.Text = "✔";
-            }
-        }
-
-        private void btnConfirmOrder_MouseLeave(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            if (button != null)
-            {
-                button.BackColor = SystemColors.Control;
-            }
-            if (button == button1)
-            {
-                button.Text = "Скасувати замовлення";
-            }
-            if (button == btnConfirmOrder)
-            {
-                button.Text = "Підтвердити замовлення";
-            }
-        }
     }
 }

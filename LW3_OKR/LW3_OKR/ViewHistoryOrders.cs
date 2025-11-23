@@ -77,31 +77,5 @@ namespace LW3_OKR
                 MessageBox.Show("Замовлень за цією датою не знайдено.");
             }
         }
-
-        private void buttonFind_MouseEnter(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Button button = sender as System.Windows.Forms.Button;
-            if (button != null)
-            {
-                button.BackColor = Color.LightBlue;
-            }
-            if (button == buttonFind)
-            {
-                button.Text = "🔍";
-            }
-        }
-
-        private void buttonFind_MouseLeave(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Button button = sender as System.Windows.Forms.Button;
-            if (button != null)
-            {
-                button.BackColor = Color.LightBlue;
-            }
-            if (button == buttonFind)
-            {
-                button.Text = "Знайти за датою";
-            }
-        }
     }
 }

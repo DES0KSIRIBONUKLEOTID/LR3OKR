@@ -42,94 +42,98 @@
             // listBoxItems
             // 
             listBoxItems.FormattingEnabled = true;
-            listBoxItems.Location = new Point(12, 53);
+            listBoxItems.ItemHeight = 25;
+            listBoxItems.Location = new Point(15, 66);
+            listBoxItems.Margin = new Padding(4);
             listBoxItems.Name = "listBoxItems";
-            listBoxItems.Size = new Size(416, 184);
+            listBoxItems.Size = new Size(519, 229);
             listBoxItems.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(136, 20);
+            label1.Location = new Point(170, 25);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(158, 20);
+            label1.Size = new Size(186, 25);
             label1.TabIndex = 1;
             label1.Text = "Поточне замовлення";
             // 
             // lblItemsSum
             // 
             lblItemsSum.AutoSize = true;
-            lblItemsSum.Location = new Point(12, 239);
+            lblItemsSum.Location = new Point(15, 299);
+            lblItemsSum.Margin = new Padding(4, 0, 4, 0);
             lblItemsSum.Name = "lblItemsSum";
-            lblItemsSum.Size = new Size(50, 20);
+            lblItemsSum.Size = new Size(59, 25);
             lblItemsSum.TabIndex = 2;
             lblItemsSum.Text = "label2";
             // 
             // lblTips
             // 
             lblTips.AutoSize = true;
-            lblTips.Location = new Point(12, 269);
+            lblTips.Location = new Point(15, 336);
+            lblTips.Margin = new Padding(4, 0, 4, 0);
             lblTips.Name = "lblTips";
-            lblTips.Size = new Size(50, 20);
+            lblTips.Size = new Size(59, 25);
             lblTips.TabIndex = 3;
             lblTips.Text = "label3";
             // 
             // lblTotal
             // 
             lblTotal.AutoSize = true;
-            lblTotal.Location = new Point(12, 298);
+            lblTotal.Location = new Point(15, 373);
+            lblTotal.Margin = new Padding(4, 0, 4, 0);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(50, 20);
+            lblTotal.Size = new Size(59, 25);
             lblTotal.TabIndex = 4;
             lblTotal.Text = "label4";
             // 
             // button1
             // 
-            button1.Location = new Point(12, 400);
+            button1.Location = new Point(15, 500);
+            button1.Margin = new Padding(4);
             button1.Name = "button1";
-            button1.Size = new Size(187, 38);
+            button1.Size = new Size(234, 48);
             button1.TabIndex = 5;
             button1.Text = "Скасувати замовлення";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
-            button1.MouseEnter += btnConfirmOrder_MouseEnter;
-            button1.MouseLeave += btnConfirmOrder_MouseLeave;
             // 
             // btnConfirmOrder
             // 
-            btnConfirmOrder.Location = new Point(241, 400);
+            btnConfirmOrder.Location = new Point(301, 500);
+            btnConfirmOrder.Margin = new Padding(4);
             btnConfirmOrder.Name = "btnConfirmOrder";
-            btnConfirmOrder.Size = new Size(187, 38);
+            btnConfirmOrder.Size = new Size(234, 48);
             btnConfirmOrder.TabIndex = 6;
             btnConfirmOrder.Text = "Підтвердити замовлення";
             btnConfirmOrder.UseVisualStyleBackColor = true;
             btnConfirmOrder.Click += button2_Click;
-            btnConfirmOrder.MouseEnter += btnConfirmOrder_MouseEnter;
-            btnConfirmOrder.MouseLeave += btnConfirmOrder_MouseLeave;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(302, 239);
+            label2.Location = new Point(378, 299);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(113, 20);
+            label2.Size = new Size(134, 25);
             label2.TabIndex = 7;
             label2.Text = "Введіть чайові:";
             // 
             // txtTips
             // 
-            txtTips.Location = new Point(302, 269);
-            txtTips.Margin = new Padding(2);
+            txtTips.Location = new Point(378, 336);
             txtTips.Name = "txtTips";
-            txtTips.Size = new Size(116, 27);
+            txtTips.Size = new Size(144, 31);
             txtTips.TabIndex = 8;
             // 
             // OrderForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.ChatGPT_Image_12_лист__2025_р___09_39_43;
-            ClientSize = new Size(440, 450);
+            ClientSize = new Size(550, 562);
             Controls.Add(txtTips);
             Controls.Add(label2);
             Controls.Add(btnConfirmOrder);
@@ -139,6 +143,7 @@
             Controls.Add(lblItemsSum);
             Controls.Add(label1);
             Controls.Add(listBoxItems);
+            Margin = new Padding(4);
             Name = "OrderForm";
             Text = "OrderForm";
             ResumeLayout(false);

@@ -35,6 +35,7 @@
             label3 = new Label();
             listView1 = new ListView();
             buttonFind = new Button();
+            find = new Button();
             SuspendLayout();
             // 
             // label1
@@ -52,23 +53,19 @@
             // 
             // textBoxSum
             // 
-            textBoxSum.BackColor = Color.White;
-            textBoxSum.ForeColor = Color.Red;
-            textBoxSum.Location = new Point(293, 149);
+            textBoxSum.Location = new Point(339, 156);
             textBoxSum.Margin = new Padding(2);
             textBoxSum.Name = "textBoxSum";
-            textBoxSum.Size = new Size(98, 27);
-            textBoxSum.TabIndex = 1;
+            textBoxSum.Size = new Size(134, 27);
+            textBoxSum.TabIndex = 8;
             // 
             // textBoxDate
             // 
-            textBoxDate.BackColor = Color.White;
-            textBoxDate.ForeColor = Color.Red;
-            textBoxDate.Location = new Point(292, 75);
+            textBoxDate.Location = new Point(339, 84);
             textBoxDate.Margin = new Padding(2);
             textBoxDate.Name = "textBoxDate";
-            textBoxDate.Size = new Size(123, 27);
-            textBoxDate.TabIndex = 2;
+            textBoxDate.Size = new Size(134, 27);
+            textBoxDate.TabIndex = 7;
             // 
             // label2
             // 
@@ -106,16 +103,25 @@
             // 
             // buttonFind
             // 
-            buttonFind.BackColor = Color.White;
-            buttonFind.Location = new Point(293, 289);
+            buttonFind.BackColor = Color.Cyan;
+            buttonFind.Location = new Point(612, 401);
+            buttonFind.Margin = new Padding(4);
             buttonFind.Name = "buttonFind";
-            buttonFind.Size = new Size(156, 39);
+            buttonFind.Size = new Size(195, 64);
             buttonFind.TabIndex = 7;
-            buttonFind.Text = "Знайти за датою";
+            buttonFind.Text = "Знайти замовлення за датою";
             buttonFind.UseVisualStyleBackColor = false;
             buttonFind.Click += buttonFind_Click;
-            buttonFind.MouseEnter += buttonFind_MouseEnter;
-            buttonFind.MouseLeave += buttonFind_MouseLeave;
+            // 
+            // find
+            // 
+            find.Location = new Point(311, 294);
+            find.Name = "find";
+            find.Size = new Size(186, 34);
+            find.TabIndex = 9;
+            find.Text = "Найти";
+            find.UseVisualStyleBackColor = true;
+            find.Click += buttonFind_Click;
             // 
             // ViewHistoryOrders
             // 
@@ -123,7 +129,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Cornsilk;
             ClientSize = new Size(522, 360);
-            Controls.Add(buttonFind);
+            Controls.Add(find);
             Controls.Add(listView1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -145,5 +151,6 @@
         private Label label3;
         private ListView listView1;
         private Button buttonFind;
+        private Button find;
     }
 }
