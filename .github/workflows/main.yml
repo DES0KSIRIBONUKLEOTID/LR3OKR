@@ -1,0 +1,36 @@
+name: Auto PR develop → staging
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  auto_pr:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: develop
+          base: staging
+          title: "Auto PR: develop → staging"
+          body: |
+            Це автоматично створений PR із develop у staging.
+
+      - name: Enable automerge
+        if: steps.cpr.outputs.pull-request-number != ''
+        uses: peter-evans/enable-pull-request-automerge@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+          merge-method: merge
