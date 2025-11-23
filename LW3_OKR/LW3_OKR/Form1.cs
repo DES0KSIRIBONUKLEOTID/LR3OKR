@@ -397,16 +397,8 @@ namespace LW3_OKR
             }
 
             // Запитуємо/оновлюємо чайові
-            string tipsStr = Interaction.InputBox(
-                "Введіть чайові (грн, можна 0):",
-                "Чайові",
-                currentOrder.Tips.ToString()
-            );
+        
 
-            if (decimal.TryParse(tipsStr, out decimal tips))
-            {
-                currentOrder.Tips = tips;
-            }
 
             // Формуємо текст замовлення
             StringBuilder sb = new StringBuilder();
@@ -446,30 +438,41 @@ namespace LW3_OKR
             ShowCurrentOrder();
         }
 
+        // В Form1.cs
+
         private void button5_Click(object sender, EventArgs e)
         {
-
             if (currentOrder == null || currentOrder.Items.Count == 0)
             {
                 MessageBox.Show("Поточне замовлення порожнє!");
                 return;
             }
 
-            // Перед показом — питаємо чайові
-            string tipsStr = Microsoft.VisualBasic.Interaction.InputBox(
-                "Введіть чайові (грн):", "Чайові", currentOrder.Tips.ToString());
-
-            if (decimal.TryParse(tipsStr, out decimal tips))
-                currentOrder.Tips = tips;
-
             // Відкриваємо форму замовлення
             OrderForm form = new OrderForm(currentOrder);
-            form.ShowDialog();
 
-            if (form.OrderCancelled)
+            // 💡 Використовуємо ShowDialog() і зберігаємо результат
+            DialogResult result = form.ShowDialog();
+
+            // 💡 ВИПАДОК 1: Замовлення було успішно підтверджено (збережено у БД)
+            if (result == DialogResult.OK)
             {
+                // Якщо OrderForm повертає OK, це означає, що замовлення збережено.
+                // Очищаємо поточне замовлення.
+                currentOrder = null;
+                MessageBox.Show("Замовлення успішно підтверджено та закрито.");
+            }
+            // 💡 ВИПАДОК 2: Замовлення було скасовано кнопкою "Скасувати замовлення"
+            else if (form.OrderCancelled)
+            {
+                // Якщо OrderForm.OrderCancelled == true, це означає, що користувач скасував його.
                 currentOrder = null;
                 MessageBox.Show("Замовлення скасовано.");
+            }
+            // ВИПАДОК 3: Користувач просто натиснув "Закрити"
+            else
+            {
+                // Замовлення залишається в пам'яті, щоб його можна було продовжити.
             }
         }
 
