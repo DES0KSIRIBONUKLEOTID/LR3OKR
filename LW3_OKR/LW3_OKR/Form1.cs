@@ -27,6 +27,7 @@ namespace LW3_OKR
             button3.Font = new Font("Segoe UI Emoji", 12);
             button4.Font = new Font("Segoe UI Emoji", 12);
             button5.Font = new Font("Segoe UI Emoji", 12);
+            buttonViveHist.Font = new Font("Segoe UI Emoji", 12);
             VivePersonal.Font = new Font("Segoe UI Emoji", 12);
         }
 

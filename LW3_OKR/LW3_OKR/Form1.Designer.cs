@@ -159,9 +159,9 @@
             // 
             // buttonViveHist
             // 
-            buttonViveHist.Location = new Point(397, 22);
+            buttonViveHist.Location = new Point(356, 22);
             buttonViveHist.Name = "buttonViveHist";
-            buttonViveHist.Size = new Size(150, 46);
+            buttonViveHist.Size = new Size(214, 46);
             buttonViveHist.TabIndex = 11;
             buttonViveHist.Text = "Історія замовлень";
             buttonViveHist.UseVisualStyleBackColor = true;
