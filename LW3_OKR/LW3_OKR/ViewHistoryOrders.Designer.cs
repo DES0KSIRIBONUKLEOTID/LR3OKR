@@ -40,10 +40,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.Cyan;
-            label1.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(594, 191);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(365, 153);
             label1.Name = "label1";
             label1.Size = new Size(273, 25);
             label1.TabIndex = 0;
@@ -51,32 +51,29 @@
             // 
             // textBoxSum
             // 
-            textBoxSum.BackColor = Color.White;
-            textBoxSum.ForeColor = Color.Red;
-            textBoxSum.Location = new Point(595, 232);
-            textBoxSum.Margin = new Padding(4, 4, 4, 4);
-            textBoxSum.Name = "textBoxSum";
-            textBoxSum.Size = new Size(152, 31);
-            textBoxSum.TabIndex = 1;
+            textBox1.BackColor = Color.White;
+            textBox1.ForeColor = Color.Red;
+            textBox1.Location = new Point(366, 186);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(122, 27);
+            textBox1.TabIndex = 1;
             // 
             // textBoxDate
             // 
-            textBoxDate.BackColor = Color.White;
-            textBoxDate.ForeColor = Color.Red;
-            textBoxDate.Location = new Point(594, 111);
-            textBoxDate.Margin = new Padding(4, 4, 4, 4);
-            textBoxDate.Name = "textBoxDate";
-            textBoxDate.Size = new Size(190, 31);
-            textBoxDate.TabIndex = 2;
+            textBox2.BackColor = Color.White;
+            textBox2.ForeColor = Color.Red;
+            textBox2.Location = new Point(365, 89);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(153, 27);
+            textBox2.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.Cyan;
-            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.InactiveCaptionText;
-            label2.Location = new Point(594, 79);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.BackColor = Color.White;
+            label2.Font = new Font("Bauhaus 93", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
+            label2.Location = new Point(365, 63);
             label2.Name = "label2";
             label2.Size = new Size(428, 29);
             label2.TabIndex = 3;
@@ -85,11 +82,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(0, 0, 192);
-            label3.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Yellow;
-            label3.Location = new Point(15, 25);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.BackColor = Color.White;
+            label3.Font = new Font("Vladimir Script", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
+            label3.Location = new Point(6, 22);
             label3.Name = "label3";
             label3.Size = new Size(270, 32);
             label3.TabIndex = 5;
@@ -100,7 +96,7 @@
             listView1.Location = new Point(8, 79);
             listView1.Margin = new Padding(4, 4, 4, 4);
             listView1.Name = "listView1";
-            listView1.Size = new Size(578, 412);
+            listView1.Size = new Size(340, 330);
             listView1.TabIndex = 6;
             listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -120,10 +116,9 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
-            BackgroundImage = Properties.Resources.FonHistory;
-            ClientSize = new Size(1000, 562);
-            Controls.Add(buttonFind);
+            BackColor = Color.Cornsilk;
+            ClientSize = new Size(653, 450);
+            Controls.Add(button1);
             Controls.Add(listView1);
             Controls.Add(label3);
             Controls.Add(label2);
