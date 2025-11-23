@@ -39,6 +39,7 @@
             flowGoods = new FlowLayoutPanel();
             button5 = new Button();
             buttonViveHist = new Button();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -146,9 +147,9 @@
             // 
             // button5
             // 
-            button5.Location = new Point(576, 22);
+            button5.Location = new Point(636, 22);
             button5.Name = "button5";
-            button5.Size = new Size(263, 46);
+            button5.Size = new Size(203, 46);
             button5.TabIndex = 10;
             button5.Text = "Переглянути замовлення";
             button5.UseVisualStyleBackColor = true;
@@ -158,7 +159,7 @@
             // 
             // buttonViveHist
             // 
-            buttonViveHist.Location = new Point(397, 22);
+            buttonViveHist.Location = new Point(334, 22);
             buttonViveHist.Name = "buttonViveHist";
             buttonViveHist.Size = new Size(150, 46);
             buttonViveHist.TabIndex = 11;
@@ -166,12 +167,23 @@
             buttonViveHist.UseVisualStyleBackColor = true;
             buttonViveHist.Click += buttonViveHist_Click;
             // 
+            // button6
+            // 
+            button6.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button6.Location = new Point(491, 22);
+            button6.Name = "button6";
+            button6.Size = new Size(139, 46);
+            button6.TabIndex = 12;
+            button6.Text = "Відкрити склад пунктів меню";
+            button6.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(977, 535);
+            Controls.Add(button6);
             Controls.Add(buttonViveHist);
             Controls.Add(button5);
             Controls.Add(flowGoods);
@@ -204,5 +216,6 @@
         private FlowLayoutPanel flowGoods;
         private Button button5;
         private Button buttonViveHist;
+        private Button button6;
     }
 }
