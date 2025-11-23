@@ -122,6 +122,8 @@
             find.Text = "Найти";
             find.UseVisualStyleBackColor = true;
             find.Click += buttonFind_Click;
+            find.MouseEnter += buttonFind_MouseEnter;
+            find.MouseLeave += buttonFind_MouseLeave;
             // 
             // ViewHistoryOrders
             // 

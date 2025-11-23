@@ -22,7 +22,31 @@ namespace LW3_OKR
 
             SetupListView();
         }
+        private void buttonFind_MouseEnter(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Button button = sender as System.Windows.Forms.Button;
+            if (button != null)
+            {
+                button.BackColor = Color.LightBlue;
+            }
+            if (button == find)
+            {
+                button.Text = "🔍";
+            }
+        }
 
+        private void buttonFind_MouseLeave(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Button button = sender as System.Windows.Forms.Button;
+            if (button != null)
+            {
+                button.BackColor = Color.LightBlue;
+            }
+            if (button == find)
+            {
+                button.Text = "Знайти за датою";
+            }
+        }
         private void SetupListView()
         {
             listView1.View = View.Details;
