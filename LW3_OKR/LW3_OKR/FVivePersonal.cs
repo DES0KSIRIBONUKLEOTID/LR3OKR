@@ -31,8 +31,8 @@ namespace LW3_OKR
                 MessageBox.Show("Немає персоналу в базі!");
                 return;
             }
-            string s= "🟦 ";
-            for(int i=0;i<=q-2;i++)
+            string s = "🟦 ";
+            for (int i = 0; i <= q - 2; i++)
             {
                 s += "🔵 ";
             }
@@ -65,12 +65,12 @@ namespace LW3_OKR
             position--;
             if (position < 0)
                 position = q - 1;
-            string s="";
+            string s = "";
             for (int i = 0; i <= q - 1; i++)
             {
                 if (i == position)
                 {
-                    s+= "🟦 ";
+                    s += "🟦 ";
                 }
                 else
                 {
@@ -99,6 +99,43 @@ namespace LW3_OKR
             }
             label1.Text = s;
             ShowPerson(position);
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+
+            if (button != null)
+            {
+                button.BackColor = Color.LightBlue;
+            }
+            if (button == button1)
+            {
+                button.Text = "<--";
+                button.BackColor = Color.Lime;
+            }
+            if (button == button2)
+            {
+                button.Text = "-->";
+                button.BackColor = Color.Lime;
+            }
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            if (button != null)
+            {
+                button.BackColor = SystemColors.Control;
+            }
+            if (button == button1)
+            {
+                button.Text = "Наступний";
+            }
+            if (button == button2)
+            {
+                button.Text = "Попередній";
+            }
         }
     }
 }
